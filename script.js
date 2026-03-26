@@ -6,6 +6,7 @@ let fabrica = 10;
 let cargoExp = 10;
 let dia = 1;
 
+// ================= UI =================
 function atualizarUI() {
   document.getElementById("money").innerText = "💰 R$ " + dinheiro;
 
@@ -20,6 +21,7 @@ function log(texto) {
   document.getElementById("report").innerHTML = "📋 " + texto;
 }
 
+// ================= AÇÕES =================
 function trabalhar() {
   dinheiro += 5;
   eficiencia += 5;
@@ -59,7 +61,41 @@ function gerenciar() {
 
 function proximoDia() {
   dia++;
-  log("Dia " + dia + " começou.");
+  log("📅 Dia " + dia + " começou.");
 }
 
+// ================= EFEITO 3D =================
+document.addEventListener("mousemove", (e) => {
+  const x = (window.innerWidth / 2 - e.clientX) / 25;
+  const y = (window.innerHeight / 2 - e.clientY) / 25;
+
+  document.body.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+});
+
+// ================= MOBILE (TOQUE) =================
+document.addEventListener("touchmove", (e) => {
+  const touch = e.touches[0];
+
+  const x = (window.innerWidth / 2 - touch.clientX) / 25;
+  const y = (window.innerHeight / 2 - touch.clientY) / 25;
+
+  document.body.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+});
+
+// ================= LIMITES =================
+function limitarStatus() {
+  eficiencia = Math.max(0, Math.min(100, eficiencia));
+  saude = Math.max(0, Math.min(100, saude));
+  satisfacao = Math.max(0, Math.min(100, satisfacao));
+  fabrica = Math.max(0, Math.min(100, fabrica));
+  cargoExp = Math.max(0, Math.min(100, cargoExp));
+}
+
+// Atualiza sempre
+setInterval(() => {
+  limitarStatus();
+  atualizarUI();
+}, 200);
+
+// Inicializa
 atualizarUI();
