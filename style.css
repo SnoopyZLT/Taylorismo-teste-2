@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0D1B2A;
+  color: white;
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(90deg, #1B263B, #3A86FF);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* CONTAINER */
+.container {
+  padding: 20px;
+}
+
+/* BARRAS */
+.bar {
+  margin: 12px 0;
+}
+
+.progress {
+  background: #1B263B;
+  border-radius: 10px;
+  height: 14px;
+  overflow: hidden;
+}
+
+.progress div {
+  height: 100%;
+  width: 0%;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* CORES */
+.blue { background: #3A86FF; }
+.red { background: #E63946; }
+.yellow { background: #FFBE0B; }
+.green { background: #2ECC71; }
+
+/* RELATÓRIO */
+.report {
+  background: #1B263B;
+  padding: 15px;
+  border-radius: 12px;
+  margin: 20px 0;
+  min-height: 120px;
+}
+
+/* BOTÕES */
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  cursor: pointer;
+  color: white;
+  transition: 0.2s;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* CORES DOS BOTÕES */
+.work { background: #3A86FF; }
+.rest { background: #2ECC71; }
+.risk { background: #FF8800; }
+.manage { background: #8338EC; }
+
+.next {
+  margin-top: 10px;
+  width: 100%;
+  background: #3A86FF;
+}
