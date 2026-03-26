@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulador Taylorista</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="header">
+  <div>
+    <strong>🏭 Simulador Taylorista</strong><br>
+    <small id="cargo">Operário • Manhã</small>
+  </div>
+  <div id="money">💰 R$ 0</div>
+</div>
+
+<div class="container">
+
+  <!-- EVOLUÇÃO DE CARGO -->
+  <div class="bar">
+    <label>Evolução de Cargo</label>
+    <div class="progress">
+      <div id="cargoBar" class="blue"></div>
+    </div>
+  </div>
+
+  <!-- STATUS -->
+  <div class="bar">
+    <label>⚙ Eficiência</label>
+    <div class="progress"><div id="eficiencia" class="blue"></div></div>
+  </div>
+
+  <div class="bar">
+    <label>❤️ Saúde</label>
+    <div class="progress"><div id="saude" class="red"></div></div>
+  </div>
+
+  <div class="bar">
+    <label>😊 Satisfação</label>
+    <div class="progress"><div id="satisfacao" class="yellow"></div></div>
+  </div>
+
+  <div class="bar">
+    <label>🏭 Fábrica</label>
+    <div class="progress"><div id="fabrica" class="green"></div></div>
+  </div>
+
+  <!-- RELATÓRIO -->
+  <div class="report" id="report">
+    📋 Comece trabalhando...
+  </div>
+
+  <!-- BOTÕES -->
+  <div class="buttons">
+    <button class="work" onclick="trabalhar()">🔧 Trabalhar</button>
+    <button class="rest" onclick="descansar()">😴 Descansar</button>
+    <button class="risk" onclick="arriscar()">🎲 Arriscar</button>
+    <button class="manage" onclick="gerenciar()">🏭 Gerenciar</button>
+  </div>
+
+  <button class="next" onclick="proximoDia()">➕ Próximo Dia</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
