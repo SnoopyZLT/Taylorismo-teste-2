@@ -1,66 +1,54 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simulador Taylorista</title>
-
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo de Escolhas | Taylorismo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <div id="game">
+    <header>
+      <h1>Simulador Taylorista</h1>
+      <p id="day-turn">Dia 1 | Turno: Manhã</p>
+    </header>
 
-<div class="header">
-  <div>
-    <strong>🏭 Simulador Taylorista</strong><br>
-    <small id="cargo">Operário • Manhã</small>
-  </div>
-  <div id="money">💰 R$ 0</div>
-</div>
+    <section id="status-bars">
+      <div class="status-bar">
+        💰 Dinheiro: <div class="bar"><span id="money" style="width: 50%;">150</span></div>
+      </div>
+      <div class="status-bar">
+        ⚡ Energia: <div class="bar"><span id="energy" style="width: 70%;">70</span></div>
+      </div>
+      <div class="status-bar">
+        😵 Estresse: <div class="bar"><span id="stress" style="width: 10%;">10</span></div>
+      </div>
+      <div class="status-bar">
+        📈 Eficiência: <div class="bar"><span id="efficiency" style="width: 80%;">80</span></div>
+      </div>
+      <div class="status-bar">
+        ❤️ Saúde: <div class="bar"><span id="health" style="width: 90%;">90</span></div>
+      </div>
+      <div class="status-bar">
+        😊 Satisfação: <div class="bar"><span id="satisfaction" style="width: 60%;">60</span></div>
+      </div>
+    </section>
 
-<div class="container">
+    <section id="actions">
+      <button class="action" id="work">Trabalhar</button>
+      <button class="action" id="rest">Descansar</button>
+      <button class="action" id="invest">Investir</button>
+    </section>
 
-  <!-- EVOLUÇÃO DE CARGO -->
-  <div class="bar">
-    <label>Evolução de Cargo</label>
-    <div class="progress">
-      <div id="cargoBar" class="blue"></div>
+    <div id="popup" class="hidden">
+      <p id="popup-text"></p>
+      <button id="close-popup">Fechar</button>
     </div>
   </div>
 
-  <!-- STATUS -->
-  <div class="bar">
-    <label>⚙ Eficiência</label>
-    <div class="progress"><div id="eficiencia" class="blue"></div></div>
-  </div>
-
-  <div class="bar">
-    <label>❤️ Saúde</label>
-    <div class="progress"><div id="saude" class="red"></div></div>
-  </div>
-
-  <div class="bar">
-    <label>😊 Satisfação</label>
-    <div class="progress"><div id="satisfacao" class="yellow"></div></div>
-  </div>
-
-  <div class="bar">
-    <label>🏭 Fábrica</label>
-    <div class="progress"><div id="fabrica" class="green"></div></div>
-  </div>
-
-  <!-- RELATÓRIO -->
-  <div class="report" id="report">
-    📋 Comece trabalhando...
-  </div>
-
-  <!-- BOTÕES -->
-  <div class="buttons">
-    <button class="work" onclick="trabalhar()">🔧 Trabalhar</button>
-    <button class="rest" onclick="descansar()">😴 Descansar</button>
-    <button class="risk" onclick="arriscar()">🎲 Arriscar</button>
-    <button class="manage" onclick="gerenciar()">🏭 Gerenciar</button>
-  </div>
+  <script src="script.js"></script>
+</body>
+                                                                                      </html>  </div>
 
   <button class="next" onclick="proximoDia()">➕ Próximo Dia</button>
 
